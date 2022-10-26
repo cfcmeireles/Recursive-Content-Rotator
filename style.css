@@ -13,7 +13,8 @@ img {
   margin-top: 70px;
 }
 
-#content img {
+#content img,
+p {
   display: none;
 }
 
@@ -21,10 +22,6 @@ h1 {
   font-size: 50px;
   text-align: center;
   margin-top: 50px;
-}
-
-#paragraphs p {
-  display: none;
 }
 
 p {

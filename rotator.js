@@ -2,19 +2,20 @@
   "use strict";
 
   let counter = 1;
+  console.log(content.children);
 
   function contentRotator() {
-    $(`#content img:nth-child(${counter})`).fadeIn(2000, function () {
-      if ($(this).is("#content img:last-child")) {
+    $(`#content .slide:nth-child(${counter}) img`).fadeIn(2000, function () {
+      if ($(this).is("#content .slide:last-child img")) {
         setTimeout(function () {
-          $(`#content img:nth-child(${counter})`).fadeOut(2000, function () {
+          $(`#content .slide:nth-child(${counter}) img`).fadeOut(2000, function () {
             counter = 1;
             contentRotator();
           });
         }, 7000);
       } else {
         setTimeout(function () {
-          $(`#content img:nth-child(${counter})`).fadeOut(2000, function () {
+          $(`#content .slide:nth-child(${counter}) img`).fadeOut(2000, function () {
             counter++;
             contentRotator();
           });
@@ -23,7 +24,7 @@
     });
   }
 
-  let timer = 1;
+  /*  let timer = 1;
 
   function paragraphRotator() {
     $(`#paragraphs p:nth-child(${timer})`).fadeIn(2000, function () {
@@ -43,7 +44,7 @@
         }, 7000);
       }
     });
-  }
+  } */
   contentRotator();
-  paragraphRotator();
+  /*   paragraphRotator(); */
 })();
