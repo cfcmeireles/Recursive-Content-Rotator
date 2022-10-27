@@ -13,8 +13,7 @@ img {
   margin-top: 70px;
 }
 
-#content img,
-p {
+.slide {
   display: none;
 }
 
